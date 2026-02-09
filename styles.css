@@ -1,95 +1,114 @@
-/* ========== ตั้งค่าพื้นฐาน ========== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ท่องเที่ยวลำปาง</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #FFF8DC;
-}
+<!-- ===== Header ===== -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <h1>Lampang Travel</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">หน้าแรก</a></li>
+                <li><a href="#about">เกี่ยวกับ</a></li>
+                <li><a href="#attractions">สถานที่ท่องเที่ยว</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+<!-- ===== Hero Section ===== -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>ยินดีต้อนรับสู่ลำปาง</h2>
+        <p>เมืองแห่งวัฒนธรรมและธรรมชาติ</p>
+        <a href="#attractions" class="btn">เริ่มต้นการเดินทาง</a>
+    </div>
+</section>
 
-/* ========== Header และ Navigation ========== */
-header {
-  background: linear-gradient(135deg, #F4A460 0%, #D2691E 100%);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+<!-- ===== About Section ===== -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title">เกี่ยวกับลำปาง</h2>
+        <div class="content-wrapper">
+            <div class="content-text">
+                <p>
+                    ลำปางเป็นจังหวัดที่มีเอกลักษณ์
+                    เต็มไปด้วยวัฒนธรรม ประวัติศาสตร์
+                    และธรรมชาติที่สวยงาม
+                </p>
+            </div>
+            <div class="content-image">
+                <img src="images/lampang1.jpg" alt="จังหวัดลำปาง">
+            </div>
+        </div>
+    </div>
+</section>
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-}
+<!-- ===== Attractions Section ===== -->
+<section class="attractions" id="attractions">
+    <div class="container">
+        <h2 class="section-title">สถานที่ท่องเที่ยว</h2>
 
-.logo h1 {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-}
+        <div class="attraction-item">
+            <div class="attraction-image">
+                <img src="images/wat.jpg" alt="วัดพระธาตุลำปางหลวง">
+            </div>
+            <div class="attraction-content">
+                <h3>วัดพระธาตุลำปางหลวง</h3>
+                <p>
+                    วัดเก่าแก่คู่บ้านคู่เมือง
+                    สวยงามและทรงคุณค่าทางประวัติศาสตร์
+                </p>
+                <a href="#" class="btn-link">อ่านเพิ่มเติม →</a>
+            </div>
+        </div>
 
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 10px;
-}
+    </div>
+</section>
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
+<!-- ===== Contact Section ===== -->
+<section class="contact-section" id="contact">
+    <div class="container contact-container">
 
-nav ul li a:hover,
-nav ul li a.active {
-  background-color: rgba(255,255,255,0.2);
-  transform: translateY(-2px);
-}
+        <div class="contact-info">
+            <h3>ข้อมูลติดต่อ</h3>
+            <p>อีเมล: lampang@travel.com</p>
+            <p>โทรศัพท์: 012-345-6789</p>
+        </div>
 
-/* ========== Hero Section ========== */
-.hero {
-  background: linear-gradient(rgba(244,164,96,0.8), rgba(210,105,30,0.8)),
-              url('images/lampang2.jpg') center/cover;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
+        <form class="contact-form">
+            <div class="form-group">
+                <label>ชื่อ</label>
+                <input type="text">
+            </div>
 
-.hero-content h2 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
+            <div class="form-group">
+                <label>ข้อความ</label>
+                <textarea></textarea>
+            </div>
 
-.hero-content p {
-  font-size: 24px;
-  margin-bottom: 30px;
-}
+            <button type="submit" class="submit-btn">ส่งข้อความ</button>
+        </form>
 
-/* ========== ปุ่ม ========== */
-.btn {
-  display: inline-block;
-  padding: 15px 40px;
-  background-color: #FFD700;
-  color: #333;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: bold
-  }
+    </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>© 2026 Lampang Travel</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
